@@ -1,0 +1,2 @@
+C:\Code\Node.js\NEWmeshblu\obj\Debug\Meshblu.njsprojResolveAssemblyReference.cache
+C:\Code\Node.js\NEWmeshblu\bin\Microsoft.NodejsTools.WebRole.dll

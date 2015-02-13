@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8e20d1a7-414c-489a-a418-e32add37fe18}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>server.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="demo.html" />
+    <Content Include="app.json" />
+    <Content Include="lib\authDevice.coffee" />
+    <Content Include="lib\cacheDeviceRedis.coffee" />
+    <Content Include="lib\claimDevice.coffee" />
+    <Content Include="lib\clearCacheRedis.coffee" />
+    <Content Include="lib\geoip.coffee" />
+    <Content Include="lib\getDevice.coffee" />
+    <Content Include="lib\getGeo.coffee" />
+    <Content Include="lib\getPublicKey.coffee" />
+    <Content Include="lib\logElasticSearch.coffee" />
+    <Content Include="lib\logEvent.coffee" />
+    <Content Include="lib\models\device.coffee" />
+    <Content Include="lib\register.coffee" />
+    <Content Include="lib\resetToken.coffee" />
+    <Content Include="lib\simpleAuth.coffee" />
+    <Content Include="lib\updateDevice.coffee" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Compile Include="config.js" />
+    <Compile Include="newrelic.js" />
+    <Compile Include="server.js" />
+    <Compile Include="lib\airbrakeErrors.js" />
+    <Compile Include="lib\bindSocket.js" />
+    <Compile Include="lib\cacheDevice.js" />
+    <Compile Include="lib\clearCache.js" />
+    <Compile Include="lib\coapRouter.js" />
+    <Compile Include="lib\coapServer.js" />
+    <Compile Include="lib\createActivity.js" />
+    <Compile Include="lib\createReadStream.js" />
+    <Compile Include="lib\createSocketEmitter.js" />
+    <Compile Include="lib\database.js" />
+    <Compile Include="lib\elasticSearch.js" />
+    <Compile Include="lib\getData.js" />
+    <Compile Include="lib\getDevices.js" />
+    <Compile Include="lib\getEvents.js" />
+    <Compile Include="lib\getLocalDevices.js" />
+    <Compile Include="lib\getParentConnection.js" />
+    <Compile Include="lib\getPhone.js" />
+    <Compile Include="lib\getSecurityImpl.js" />
+    <Compile Include="lib\getSocketId.js" />
+    <Compile Include="lib\getSystemStatus.js" />
+    <Compile Include="lib\getThrottles.js" />
+    <Compile Include="lib\getYo.js" />
+    <Compile Include="lib\httpServer.js" />
+    <Compile Include="lib\logData.js" />
+    <Compile Include="lib\mdnsServer.js" />
+    <Compile Include="lib\mqttServer.js" />
+    <Compile Include="lib\parentConnection.js" />
+    <Compile Include="lib\proxyListener.js" />
+    <Compile Include="lib\redis.js" />
+    <Compile Include="lib\redisSplunk.js" />
+    <Compile Include="lib\sendActivity.js" />
+    <Compile Include="lib\sendConfigActivity.js" />
+    <Compile Include="lib\sendMessage.js" />
+    <Compile Include="lib\sendPushNotification.js" />
+    <Compile Include="lib\sendSms.js" />
+    <Compile Include="lib\sendYo.js" />
+    <Compile Include="lib\setupCoapRoutes.js" />
+    <Compile Include="lib\setupGatewayConfig.js" />
+    <Compile Include="lib\setupHttpRoutes.js" />
+    <Compile Include="lib\setupMqttClient.js" />
+    <Compile Include="lib\socketLogic.js" />
+    <Compile Include="lib\splunk.js" />
+    <Compile Include="lib\subEvents.js" />
+    <Compile Include="lib\subscribe.js" />
+    <Compile Include="lib\unregister.js" />
+    <Compile Include="lib\updateFromClient.js" />
+    <Compile Include="lib\updatePresence.js" />
+    <Compile Include="lib\updateSocketId.js" />
+    <Compile Include="lib\util.js" />
+    <Compile Include="lib\whoAmI.js" />
+    <Compile Include="lib\wrapMqttMessage.js" />
+    <Content Include="public\index.html" />
+    <Content Include="public\jsconsole.html" />
+    <Content Include="public\localjsconsole.html" />
+    <Compile Include="public\js\meshblu.bundle.js" />
+    <Compile Include="public\js\meshblu.js" />
+    <Compile Include="public\js\skynet.bundle.js" />
+    <Compile Include="public\js\skynet.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docker" />
+    <Folder Include="lib" />
+    <Folder Include="lib\models" />
+    <Folder Include="public" />
+    <Folder Include="public\js" />
+    <Folder Include="test" />
+    <Folder Include="test\lib" />
+    <Folder Include="test\lib\models" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
